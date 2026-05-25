@@ -34,6 +34,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .sb-subtitle{font-size:11px;color:rgba(255,255,255,0.45);padding:0 18px 14px;line-height:1.4;}
 .sb-section{padding:12px 10px 6px;}
 .sb-label{font-size:10px;font-weight:500;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.08em;padding:0 8px;margin-bottom:4px;}
+
+/* ── Avance general del proyecto en sidebar ── */
+.sb-project{margin:10px 10px 0;background:rgba(245,195,0,0.12);border:1px solid rgba(245,195,0,0.22);border-radius:var(--r-md);padding:10px 12px;}
+.sb-proj-lbl{font-size:9px;font-weight:500;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.sb-proj-num{font-family:'DM Mono',monospace;font-size:28px;font-weight:300;color:var(--coppel-yellow);line-height:1;}
+.sb-proj-sub{font-size:10px;color:rgba(255,255,255,0.5);margin-top:3px;}
+.sb-proj-bar{margin-top:8px;height:4px;background:rgba(255,255,255,0.12);border-radius:2px;}
+.sb-proj-fill{height:4px;background:var(--coppel-yellow);border-radius:2px;transition:width .4s ease;}
+.sb-proj-detail{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:rgba(255,255,255,0.4);font-family:'DM Mono',monospace;}
+
 .vs-btn{display:block;width:100%;text-align:left;background:none;border:none;border-left:2px solid transparent;padding:7px 10px;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:12.5px;color:rgba(255,255,255,0.65);cursor:pointer;transition:all .15s;line-height:1.3;}
 .vs-btn:hover{background:rgba(255,255,255,0.07);color:#FFF;}
 .vs-btn.active{background:rgba(245,195,0,0.15);color:#FFF;font-weight:500;border-left:2px solid var(--coppel-yellow);}
@@ -47,6 +57,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .mhead{margin-bottom:24px;}
 .eyebrow{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
 .mtitle{font-size:22px;font-weight:500;color:var(--text);}
+
+/* ── Tarjeta avance general en encabezado ── */
+.proj-card{background:var(--coppel-navy);border-radius:var(--r-lg);padding:16px 20px;margin-bottom:20px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;}
+.proj-card-left .pc-eyebrow{font-family:'DM Mono',monospace;font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
+.proj-card-left .pc-title{font-size:14px;font-weight:500;color:#FFF;margin-bottom:10px;}
+.pc-stats{display:flex;gap:20px;}
+.pc-stat{text-align:center;}
+.pc-stat-num{font-family:'DM Mono',monospace;font-size:20px;font-weight:300;color:var(--coppel-yellow);}
+.pc-stat-lbl{font-size:10px;color:rgba(255,255,255,0.45);margin-top:1px;}
+.proj-card-right{text-align:right;}
+.pc-big{font-family:'DM Mono',monospace;font-size:48px;font-weight:300;color:var(--coppel-yellow);line-height:1;}
+.pc-big-lbl{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;}
+.pc-bar-wrap{margin-top:8px;height:6px;background:rgba(255,255,255,0.12);border-radius:3px;width:180px;}
+.pc-bar-fill{height:6px;border-radius:3px;background:var(--coppel-yellow);transition:width .4s ease;}
+.pc-vs-breakdown{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px;}
+.pc-vs-dot{width:8px;height:8px;border-radius:2px;display:inline-block;}
 
 .tabs{display:flex;gap:6px;margin-bottom:20px;border-bottom:0.5px solid var(--border2);padding-bottom:12px;}
 .tab-btn{background:none;border:0.5px solid transparent;padding:6px 16px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text2);cursor:pointer;transition:all .15s;}
@@ -63,7 +89,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .banner{border-radius:var(--r-md);padding:10px 14px;margin-bottom:16px;font-size:12px;line-height:1.5;}
 .banner strong{font-weight:500;display:block;margin-bottom:2px;}
 
-/* Import banner */
 .import-banner{background:var(--surface);border:1.5px dashed var(--border2);border-radius:var(--r-lg);padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:all .15s;}
 .import-banner:hover{border-color:var(--coppel-navy);background:#E8EBF5;}
 .import-icon{width:40px;height:40px;border-radius:var(--r-md);background:#E8EBF5;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
@@ -111,6 +136,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .cpct{font-family:'DM Mono',monospace;font-size:13px;font-weight:500;text-align:right;}
 .cimp{font-size:9px;color:var(--blue-text);font-family:'DM Mono',monospace;display:block;}
 
+/* ── Fila de totales en comparativo ── */
+.crow-total{display:grid;grid-template-columns:200px 1fr 60px 1fr 60px;gap:10px;padding:12px 16px;align-items:center;background:var(--coppel-navy);border-top:2px solid var(--coppel-yellow);}
+.crow-total .cvn{font-size:13px;font-weight:500;color:var(--coppel-yellow);}
+.crow-total .cpct{color:var(--coppel-yellow);}
+
 .bbar{margin-top:20px;background:var(--surface);border:0.5px solid var(--border2);border-radius:var(--r-md);padding:14px 16px;}
 .bbar-title{font-size:12px;font-weight:500;color:var(--text2);margin-bottom:10px;}
 .brow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
@@ -125,7 +155,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 #exparea textarea{width:100%;height:180px;font-family:'DM Mono',monospace;font-size:11px;padding:10px;border:0.5px solid var(--border2);border-radius:var(--r-sm);background:var(--surface);color:var(--text);resize:vertical;outline:none;}
 .panel{display:none;}.panel.v{display:block;}
 
-/* Import modal overlay */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:100;align-items:center;justify-content:center;}
 .modal-bg.open{display:flex;}
 .modal{background:var(--surface);border-radius:var(--r-lg);padding:24px;width:520px;max-width:95vw;border:0.5px solid var(--border2);}
@@ -156,6 +185,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
     </div>
     <div class="sb-subtitle">Seguimiento de Value Streams</div>
   </div>
+
+  <!-- Avance general del proyecto en sidebar -->
+  <div class="sb-project">
+    <div class="sb-proj-lbl">Avance general del proyecto</div>
+    <div class="sb-proj-num" id="sb-proj-num">0%</div>
+    <div class="sb-proj-sub" id="sb-proj-sub">0 de 10 VS activos</div>
+    <div class="sb-proj-bar"><div class="sb-proj-fill" id="sb-proj-fill" style="width:0%"></div></div>
+    <div class="sb-proj-detail">
+      <span id="sb-proj-cert">Cert: 0%</span>
+      <span id="sb-proj-hab">Hab: 0%</span>
+    </div>
+  </div>
+
   <div class="sb-section">
     <div class="sb-label">Value Streams</div>
     <div id="vs-nav"></div>
@@ -173,6 +215,40 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
     <div class="mtitle">Seguimiento de actividades críticas</div>
   </div>
 
+  <!-- Tarjeta avance general del proyecto -->
+  <div class="proj-card" id="proj-card">
+    <div class="proj-card-left">
+      <div class="pc-eyebrow">Avance general del proyecto LACE</div>
+      <div class="pc-title">Todos los Value Streams · Certificación + Habilitación</div>
+      <div class="pc-stats">
+        <div class="pc-stat">
+          <div class="pc-stat-num" id="pc-cert-avg">0%</div>
+          <div class="pc-stat-lbl">Certificación promedio</div>
+        </div>
+        <div class="pc-stat">
+          <div class="pc-stat-num" id="pc-hab-avg">0%</div>
+          <div class="pc-stat-lbl">Habilitación promedio</div>
+        </div>
+        <div class="pc-stat">
+          <div class="pc-stat-num" id="pc-vs-done">0</div>
+          <div class="pc-stat-lbl">VS al 100% (ambos)</div>
+        </div>
+        <div class="pc-stat">
+          <div class="pc-stat-num" id="pc-vs-total">10</div>
+          <div class="pc-stat-lbl">Total Value Streams</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <div class="pc-bar-wrap"><div class="pc-bar-fill" id="pc-bar-fill" style="width:0%"></div></div>
+      </div>
+      <div class="pc-vs-breakdown" id="pc-vs-breakdown"></div>
+    </div>
+    <div class="proj-card-right">
+      <div class="pc-big" id="pc-big">0%</div>
+      <div class="pc-big-lbl">avance total</div>
+    </div>
+  </div>
+
   <div class="tabs">
     <button class="tab-btn ac" id="tc" onclick="switchTab('cert')">Certificación</button>
     <button class="tab-btn"    id="th" onclick="switchTab('hab')">Habilitación</button>
@@ -180,7 +256,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
   </div>
 
   <!-- Panel Certificación -->
-  <div class="panel v" id="pc">
+  <div class="panel v" id="pc2">
     <div class="banner" style="background:#E8EBF5;color:var(--coppel-navy);">
       <strong>Cómo se calcula — Certificación</strong>
       Promedio ponderado: Terminado=100% · En Revisión=85% · Req. actualización=70% · En Proceso=50% · Bloqueado/No iniciado=0%. Peso doble = cuenta el doble. Los estados en azul fueron importados del Sheet. Puedes sobreescribirlos con tu propio criterio.
@@ -258,17 +334,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
   <div class="modal">
     <h3>Importar Sheet de un Value Stream</h3>
     <p>Descarga el Excel del VS desde Google Sheets (<strong>Archivo → Descargar → Microsoft Excel (.xlsx)</strong>) y selecciónalo aquí. El sistema leerá automáticamente las pestañas de Habilitación y Checklists.</p>
-
     <div class="modal-steps">
       <div class="modal-step"><div class="step-num">1</div><div>Abre el Google Sheet del VS en tu navegador</div></div>
       <div class="modal-step"><div class="step-num">2</div><div>Ve a <strong>Archivo → Descargar → Microsoft Excel (.xlsx)</strong></div></div>
       <div class="modal-step"><div class="step-num">3</div><div>Selecciona el VS al que pertenece el archivo</div></div>
       <div class="modal-step"><div class="step-num">4</div><div>Arrastra el archivo aquí o haz clic para seleccionarlo</div></div>
     </div>
-
     <label style="font-size:11px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px;">Value Stream de este archivo</label>
     <select class="modal-vs-sel" id="modal-vs-sel"></select>
-
     <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()"
       ondragover="event.preventDefault();this.classList.add('drag')"
       ondragleave="this.classList.remove('drag')"
@@ -277,9 +350,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
       <small>o haz clic para seleccionarlo desde tu computadora</small>
     </div>
     <input type="file" id="file-input" accept=".xlsx,.csv" style="display:none" onchange="handleFileSelect(event)">
-
     <div id="modal-result" style="display:none;padding:10px 12px;border-radius:var(--r-sm);font-size:12px;margin-bottom:12px;"></div>
-
     <div class="modal-btns">
       <button class="abtn" onclick="closeImport()">Cancelar</button>
     </div>
@@ -288,7 +359,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-const VSL=['VS Onboarding y VP','VS Tarjetas de Crédito','VS Préstamos Personales','VS Cobranza','VS Gestión de Carteras','VS Seguros','VS Captación','VS Plataformas Digitales','VS Pagos'];
+// ── VS Afore agregado al final ──
+const VSL=[
+  'VS Onboarding y VP',
+  'VS Tarjetas de Crédito',
+  'VS Préstamos Personales',
+  'VS Cobranza',
+  'VS Gestión de Carteras',
+  'VS Seguros',
+  'VS Captación',
+  'VS Plataformas Digitales',
+  'VS Pagos',
+  'VS Afore',  // ← NUEVO
+];
 
 const CA=[
   {n:'Diagrama de flujo de valor del VS',p:2},
@@ -312,7 +395,6 @@ const HA=[
   {n:'Roles y responsabilidades clarificadas',p:2},
 ];
 
-// Keywords to match activities from the sheet to our list
 const CA_KEYS=[
   ['diagrama','flujo','valor'],
   ['actividades','clave','métricas','outcomes'],
@@ -340,7 +422,6 @@ const SPCT={'No iniciado':0,'En Proceso':.5,'En Revisión':.85,'Requiere actuali
 const SCOL={'No iniciado':'#B4B2A9','En Proceso':'#EF9F27','En Revisión':'#378ADD','Requiere actualización':'#D4537E','Bloqueado':'#E24B4A','Terminado':'#639922'};
 const SPIL={'Terminado':'background:#EAF3DE;color:#27500A;','En Proceso':'background:#FAEEDA;color:#633806;','En Revisión':'background:#E6F1FB;color:#0C447C;','Requiere actualización':'background:#FBEAF0;color:#72243E;','Bloqueado':'background:#FCEBEB;color:#791F1F;','No iniciado':'background:#F1EFE8;color:#5F5E5A;'};
 
-// Normalize status strings from the sheet
 function normSt(raw){
   if(!raw) return 'No iniciado';
   const r=String(raw).trim().toLowerCase();
@@ -350,7 +431,6 @@ function normSt(raw){
   if(r.includes('proceso')||r.includes('progress')||r.includes('en curso')) return 'En Proceso';
   if(r.includes('bloqueado')||r.includes('blocked')) return 'Bloqueado';
   if(r==='0'||r==='0%'||r.includes('no inici')) return 'No iniciado';
-  // Try avance number
   const num=parseFloat(raw);
   if(!isNaN(num)){
     if(num>=1||num>=100) return 'Terminado';
@@ -362,7 +442,6 @@ function normSt(raw){
   return 'No iniciado';
 }
 
-// Match a sheet row name to one of our activity indices
 function matchAct(name, keys){
   const n=String(name).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   for(let i=0;i<keys.length;i++){
@@ -406,6 +485,58 @@ function calc(acts,items){
 }
 
 function pc(p){return p>=.8?'#639922':p>=.4?'#BA7517':'#E24B4A';}
+
+// ── Cálculo avance general del proyecto ──
+function calcProyecto(){
+  let totalCert=0, totalHab=0, vsDone=0;
+  VSL.forEach((_,vi)=>{
+    const cp=calc(CA,ST[vi].cert);
+    const hp=calc(HA,ST[vi].hab);
+    totalCert+=cp;
+    totalHab+=hp;
+    if(cp>=1&&hp>=1) vsDone++;
+  });
+  const n=VSL.length;
+  const certAvg=totalCert/n;
+  const habAvg=totalHab/n;
+  const overall=(certAvg+habAvg)/2;
+  return {certAvg,habAvg,overall,vsDone,total:n};
+}
+
+function rProyecto(){
+  const {certAvg,habAvg,overall,vsDone,total}=calcProyecto();
+  const ovPct=Math.round(overall*100);
+  const certPct=Math.round(certAvg*100);
+  const habPct=Math.round(habAvg*100);
+
+  // Sidebar
+  document.getElementById('sb-proj-num').textContent=ovPct+'%';
+  document.getElementById('sb-proj-sub').textContent=vsDone+' de '+total+' VS completados';
+  document.getElementById('sb-proj-fill').style.width=ovPct+'%';
+  document.getElementById('sb-proj-cert').textContent='Cert: '+certPct+'%';
+  document.getElementById('sb-proj-hab').textContent='Hab: '+habPct+'%';
+
+  // Tarjeta superior
+  document.getElementById('pc-big').textContent=ovPct+'%';
+  document.getElementById('pc-cert-avg').textContent=certPct+'%';
+  document.getElementById('pc-hab-avg').textContent=habPct+'%';
+  document.getElementById('pc-vs-done').textContent=vsDone;
+  document.getElementById('pc-vs-total').textContent=total;
+  document.getElementById('pc-bar-fill').style.width=ovPct+'%';
+
+  // Mini dots por VS
+  const breakdown=document.getElementById('pc-vs-breakdown');
+  breakdown.innerHTML=VSL.map((v,vi)=>{
+    const cp=calc(CA,ST[vi].cert);
+    const hp=calc(HA,ST[vi].hab);
+    const avg=(cp+hp)/2;
+    const col=pc(avg);
+    const pct=Math.round(avg*100);
+    return `<div title="${v}: ${pct}%" style="display:flex;align-items:center;gap:3px;font-size:9px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+      <div style="width:8px;height:8px;border-radius:2px;background:${col};flex-shrink:0;"></div>${pct}%
+    </div>`;
+  }).join('');
+}
 
 function rNav(){
   document.getElementById('vs-nav').innerHTML=VSL.map((v,i)=>{
@@ -490,7 +621,7 @@ function rList(type){
 }
 
 function rComp(){
-  document.getElementById('cl').innerHTML=VSL.map((v,vi)=>{
+  const rows=VSL.map((v,vi)=>{
     const cp=calc(CA,ST[vi].cert),hp=calc(HA,ST[vi].hab);
     const cpct=Math.round(cp*100),hpct=Math.round(hp*100);
     const impLabel=ST[vi].importedAt?'<span class="cimp">📥 importado</span>':'';
@@ -502,18 +633,31 @@ function rComp(){
       <span class="cpct" style="color:${pc(hp)}">${hpct}%</span>
     </div>`;
   }).join('');
+
+  // Fila de totales
+  const {certAvg,habAvg,overall}=calcProyecto();
+  const certPct=Math.round(certAvg*100),habPct=Math.round(habAvg*100),ovPct=Math.round(overall*100);
+  const totalRow=`<div class="crow-total">
+    <span class="cvn">⬡ Promedio general del proyecto (${ovPct}%)</span>
+    <div><div class="bwrap" style="background:rgba(255,255,255,0.15)"><div class="bfill" style="width:${certPct}%;background:var(--coppel-yellow)"></div></div></div>
+    <span class="cpct">${certPct}%</span>
+    <div><div class="bwrap" style="background:rgba(255,255,255,0.15)"><div class="bfill" style="width:${habPct}%;background:#1D9E75"></div></div></div>
+    <span class="cpct">${habPct}%</span>
+  </div>`;
+
+  document.getElementById('cl').innerHTML=rows+totalRow;
 }
 
 function render(){
   document.getElementById('eyebrow').textContent=VSL[cvs];
-  rNav();rMet('cert');rList('cert');rMet('hab');rList('hab');rComp();updateStamps();
+  rNav();rMet('cert');rList('cert');rMet('hab');rList('hab');rComp();updateStamps();rProyecto();
 }
 
 function selVS(i){cvs=i;render();}
 
 function switchTab(tab){
   ctab=tab;
-  const map={cert:{p:'pc',t:'tc',cls:'ac'},hab:{p:'ph',t:'th',cls:'ah'},comp:{p:'px',t:'tx',cls:'ax'}};
+  const map={cert:{p:'pc2',t:'tc',cls:'ac'},hab:{p:'ph',t:'th',cls:'ah'},comp:{p:'px',t:'tx',cls:'ax'}};
   Object.entries(map).forEach(([k,v])=>{
     document.getElementById(v.p).className='panel'+(k===tab?' v':'');
     const btn=document.getElementById(v.t);
@@ -525,7 +669,7 @@ function setSt(type,idx,val){
   const key=type==='cert'?'cert':'hab';
   ST[cvs][key][idx].status=val;
   ST[cvs][key][idx].imported=false;
-  ss(ST);rMet(type);rList(type);rComp();rNav();
+  ss(ST);rMet(type);rList(type);rComp();rNav();rProyecto();
 }
 
 function setNota(type,idx,val){
@@ -536,7 +680,6 @@ function setNota(type,idx,val){
   if(inputs[idx]) inputs[idx].classList.toggle('hn',val.trim().length>0);
 }
 
-// ── Import modal ──────────────────────────────────────────────
 function openImport(){
   const sel=document.getElementById('modal-vs-sel');
   sel.innerHTML=VSL.map((v,i)=>`<option value="${i}"${i===cvs?' selected':''}>${v}</option>`).join('');
@@ -573,13 +716,11 @@ function processFile(file){
       const data=new Uint8Array(e.target.result);
       const wb=XLSX.read(data,{type:'array'});
 
-      // Try to read each sheet
       wb.SheetNames.forEach(sname=>{
         const ws=wb.Sheets[sname];
         const rows=XLSX.utils.sheet_to_json(ws,{defval:''});
         if(!rows.length) return;
 
-        // Detect sheet type by column names
         const cols=Object.keys(rows[0]).map(c=>c.toLowerCase());
         const isHab=sname.toLowerCase().includes('habilitaci') ||
           cols.some(c=>c.includes('actividad crítica')||c.includes('actividad critica'));
@@ -638,7 +779,7 @@ function processFile(file){
       const total=certMatches+habMatches;
       ST[vsIdx].importedAt=new Date().toISOString();
       ss(ST);
-      if(cvs===vsIdx) render(); else rNav();
+      if(cvs===vsIdx) render(); else {rNav();rProyecto();}
 
       res.style.cssText=`display:block;padding:10px 12px;border-radius:6px;font-size:12px;margin-bottom:12px;background:${total>0?'var(--green-bg)':'var(--amber-bg)'};color:${total>0?'var(--green-text)':'var(--amber-text)'};`;
       res.innerHTML=total>0
@@ -654,7 +795,6 @@ function processFile(file){
   reader.readAsArrayBuffer(file);
 }
 
-// ── Save / Load JSON ──────────────────────────────────────────
 function clearAll(){
   if(!confirm('¿Seguro que quieres borrar todos los datos?\nEsta acción no se puede deshacer.')) return;
   localStorage.removeItem('lace_v4');ST=init();render();
@@ -698,7 +838,17 @@ function cargarJSON(ev){
 
 function exportResumen(){
   const area=document.getElementById('exparea');
-  const lines=['LACE · RESUMEN DE AVANCES','='.repeat(52),`Generado: ${new Date().toLocaleString('es-MX')}`,''];
+  const {certAvg,habAvg,overall,vsDone}=calcProyecto();
+  const lines=[
+    'LACE · RESUMEN DE AVANCES','='.repeat(52),
+    `Generado: ${new Date().toLocaleString('es-MX')}`,
+    '',
+    `AVANCE GENERAL DEL PROYECTO: ${Math.round(overall*100)}%`,
+    `  Certificación promedio: ${Math.round(certAvg*100)}%`,
+    `  Habilitación promedio:  ${Math.round(habAvg*100)}%`,
+    `  Value Streams completados: ${vsDone} de ${VSL.length}`,
+    '',
+  ];
   VSL.forEach((v,vi)=>{
     const cp=Math.round(calc(CA,ST[vi].cert)*100);
     const hp=Math.round(calc(HA,ST[vi].hab)*100);
